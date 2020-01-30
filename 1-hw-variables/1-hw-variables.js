@@ -17,11 +17,17 @@ console.log(roundedSum);
 let sum2 = Math.ceil(sum/100)*100;
 console.log(sum2);
 
-if (roundedSum%2 === 0) {
-    console.log(true);
+
+let isEven;
+
+if (Math.floor(sum)%2 === 0) {
+    isEven = true;
 } else {
-    console.log(false);
+    isEven = false;
 }
+
+console.log(isEven);
+
 
 let change = 500 - sum;
 console.log(change);
@@ -46,6 +52,7 @@ console.log(`Максимальна ціна: ${maxPrice}
 Вартість всіх товарів: ${sum}
 Сума цілих частин вартості товарів: ${roundedSum}
 Вартість всіх товарів, округлена до сотень: ${sum2}
+Чи є сума всіх товарів, округлена до меншого, парним числом? : ${isEven};
 Сума здачі, при оплаті всіх товарів, якщо клієнт заплатив 500 грн: ${change}
 Середнє значення цін, округлене до другого знаку після коми: ${averagePrice}
 
