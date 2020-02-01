@@ -1,49 +1,41 @@
-let apples = 15.678;
-let oranges = 123.965;
-let lemons = 90.2345;
+const apples = 15.678;
+const oranges = 123.965;
+const lemons = 90.2345;
 
-let maxPrice = Math.max(apples, oranges, lemons);
+const maxPrice = Math.max(apples, oranges, lemons);
 console.log(maxPrice);
 
-let minPrice = Math.min(apples,oranges, lemons);
+const minPrice = Math.min(apples,oranges, lemons);
 console.log(minPrice);
 
-let sum = apples + oranges + lemons;
+const sum = apples + oranges + lemons;
 console.log(sum);
 
-let roundedSum = Math.floor(apples) + Math.floor(oranges) + Math.floor(lemons);
+const roundedSum = Math.floor(apples) + Math.floor(oranges) + Math.floor(lemons);
 console.log(roundedSum);
 
-let sum2 = Math.ceil(sum/100)*100;
+const sum2 = Math.ceil(sum/100)*100;
 console.log(sum2);
 
-
-let isEven;
-
-if (Math.floor(sum)%2 === 0) {
-    isEven = true;
-} else {
-    isEven = false;
-}
-
+const isEven = Math.floor(sum)%2 === 0;
 console.log(isEven);
 
-
-let change = 500 - sum;
+const clientPayment = 500;
+const change = clientPayment - sum;
 console.log(change);
 
-let averagePrice = (sum/3).toFixed(2);
+const averagePrice = (sum/3).toFixed(2);
 console.log(averagePrice);
 
-let randomDiscount = Math.floor(Math.random()*51);
+const randomDiscount = Math.floor(Math.random()*51);
 console.log(`Current discount: ${randomDiscount} %`);
 
-let clientPrice = (sum - sum * randomDiscount / 100).toFixed(2);
+const clientPrice = (sum - sum * randomDiscount / 100).toFixed(2);
 console.log(`Price for client: ${clientPrice}`);
 
-let totalCost = Math.floor(sum/2);
+const totalCost = Math.floor(sum/2);
 
-let lostProfit = totalCost - Math.trunc(sum * randomDiscount / 100);
+const lostProfit = totalCost - Math.trunc(sum * randomDiscount / 100);
 console.log(`Current lost profit is: ${lostProfit}`);
 
 
