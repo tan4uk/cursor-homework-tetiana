@@ -32,7 +32,7 @@ console.log(`Skip even numbers? : ${skipEvenNumbers}`);
 
 let sum = 0;
 
-for (i = numberN; i<= numberM; i++) {
+for (let i = numberN; i<= numberM; i++) {
     if (skipEvenNumbers === false) {
       sum+=i;
     } else if (skipEvenNumbers === true) {
