@@ -43,7 +43,7 @@ console.log(getSumWithoutTax(1000));
 
 // Function 5
 const getRandomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max + 1 - min) + min);
 }
   
 console.log(getRandomNumber(4, 10));
