@@ -1,6 +1,6 @@
 // Function 1
 const getMaxDigit = (number) => {
-    let arr = number.toString().split('');
+    const arr = number.toString().split('');
     return Math.max(...arr);
 }
   
@@ -9,20 +9,22 @@ console.log(getMaxDigit(1236));
 
 // Function 2
 const getPowNumber = (num1, num2) => {
-    let result = 1;
-      for (let i = 1; i <= num2; i++) {
-       result *= num1;
+  let result = 1;
+    for (let i = 1; i <= num2; i++) {
+      if( num2 === 0) {
+        result = 1;
+     } else {
+        result *= num1;
      }
-    return result;
+   }
+  return result;
 }
- 
-console.log(getPowNumber(8,4));
 
 
 // Function 3
 const upperFirstLetter = (string) => {
-    let firstPart= string[0].toUpperCase();
-    let secondPart = string.slice(1).toLowerCase();
+    const firstPart= string[0].toUpperCase();
+    const secondPart = string.slice(1).toLowerCase();
     return firstPart + secondPart;
 }
   
@@ -32,7 +34,7 @@ console.log(upperFirstLetter('vLAD'));
 // Function 4 
 const getSumWithoutTax = (salary) => {
     const taxPercent = 19.5;
-    let clientRemainder = salary - salary*taxPercent/100;
+    const clientRemainder = salary - salary*taxPercent/100;
     return clientRemainder;
 }
  
@@ -49,8 +51,8 @@ console.log(getRandomNumber(4, 10));
 
 // Function 6 
 const countLetter = (letter, word) => {
-    let letterLow = letter.toLowerCase();
-    let wordLow = word.toLowerCase();
+    const letterLow = letter.toLowerCase();
+    const wordLow = word.toLowerCase();
     let result = 0;
       for (let i = 0; i < word.length; i++) {
         if (wordLow[i] === letterLow) {
@@ -65,10 +67,10 @@ console.log(countLetter('а', 'Асталависта'));
 
 // Function 7
 const convertMoney = (string) => {
-    let hrn= string.slice(string.length-3, string.length).toLowerCase();
-    let dollar = string.slice(string.length-1, string.length);
-    let ukrValue = string.slice(0, string.length-3);
-    let usaValue = string.slice(0, string.length-1);
+    const hrn= string.slice(string.length-3, string.length).toLowerCase();
+    const dollar = string.slice(string.length-1, string.length);
+    const ukrValue = string.slice(0, string.length-3);
+    const usaValue = string.slice(0, string.length-1);
       if (hrn === 'uah') {
         return (ukrValue/25) + '$';
     } else if (dollar === '$') {
@@ -110,7 +112,7 @@ console.log(deleteLetters('l', 'blablabla'))
 
 // Function 10
 const isPalindrome = (string) => {
-    let result = true;
+    const result = true;
     let newString = ''; 
     for (let i = 0; i < string.length; i++) {
       if(string[i] !== ' ') {
