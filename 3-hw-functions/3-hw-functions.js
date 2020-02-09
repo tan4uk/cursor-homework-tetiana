@@ -146,14 +146,14 @@ const deleteDuplicateLetter = (string) => {
 console.log(deleteDuplicateLetter('Бисквит был очень нежный'));
 
 
-document.writeln(`<p> Function 1  - gets the maximum digit from a number: input: 1236 -- result: ${getMaxDigit(1236)}</p>`);
-document.writeln(`<p> Function 2  - returns the base to the exponent power: input: 8, 4 -- result:  ${getPowNumber(8,4)}</p>`);
-document.writeln(`<p> Function 3  - formats a name in a way only first letter is uppercase: input: vLAD -- result: ${upperFirstLetter('vLAD')}</p>`);
-document.writeln(`<p> Function 4  - returns salary without taxes: input: 1000 -- result: ${getSumWithoutTax(1000)}</p>`);
-document.writeln(`<p> Function 5  - returns random number between two numbers: input: 1, 10 -- result: ${getRandomNumber(1, 10)}</p>`);
-document.writeln(`<p> Function 6  - counts how many times an input letter repeats in an input word: input: 'а', 'Асталависта' -- result: ${countLetter('а', 'Асталависта')}</p>`);
-document.writeln(`<p> Function 7  - converts uah in usd and vice versa: input: '2500UAH' -- result: ${convertMoney('2500UAH')}</p>`);
-document.writeln(`<p> Function 8  - generates random password which have as many digits as an input: input: 5 -- result: ${getRandomPassword(5)}</p>`);
-document.writeln(`<p> Function 9  - deletes an input letter from an input word: input: 'l', 'blablabla' -- result: ${deleteLetters('l', 'blablabla')}</p>`);
-document.writeln(`<p> Function 10  - checks if the given word is palindrome: input: 'Аргентина манит негра' -- result: ${isPalindrome('Аргентина манит негра')}</p>`);
-document.writeln(`<p> Function 11  - deletes all duplicate letters from the string: input: 'Бисквит был очень нежный' -- result: ${deleteDuplicateLetter('Бисквит был очень нежный')}</p>`);
+document.writeln(`<p> <span class="name">Function 1</span> - gets the maximum digit from a number: <strong>input: 1236</strong> -- <span class="result">result: ${getMaxDigit(1236)}</span></p>`);
+document.writeln(`<p> <span class="name">Function 2</span>  - returns the base to the exponent power: <strong>input: 8, 4</strong>  -- <span class="result">result:  ${getPowNumber(8,4)}</span></p>`);
+document.writeln(`<p> <span class="name">Function 3</span>  - formats a name in a way only first letter is uppercase: <strong>input: vLAD</strong>  -- <span class="result">result: ${upperFirstLetter('vLAD')}</span></p>`);
+document.writeln(`<p> <span class="name">Function 4</span>  - returns salary without taxes: <strong>input: 1000</strong>  -- <span class="result">result: ${getSumWithoutTax(1000)}</span></p>`);
+document.writeln(`<p> <span class="name">Function 5</span>  - returns random number between two numbers: <strong>input: 1, 10</strong>  -- <span class="result">result: ${getRandomNumber(1, 10)}</span></p>`);
+document.writeln(`<p> <span class="name">Function 6</span>  - counts how many times an input letter repeats in an input word: <strong>input: 'а', 'Асталависта'</strong>  -- <span class="result">result: ${countLetter('а', 'Асталависта')}</span></p>`);
+document.writeln(`<p> <span class="name">Function 7</span>  - converts uah in usd and vice versa: <strong>input: '2500UAH'</strong>  -- <span class="result">result: ${convertMoney('2500UAH')}</span></p>`);
+document.writeln(`<p> <span class="name">Function 8</span>  - generates random password which have as many digits as an input: <strong>input: 5</strong>  -- <span class="result">result: ${getRandomPassword(5)}</span></p>`);
+document.writeln(`<p> <span class="name">Function 9</span>  - deletes an input letter from an input word: <strong>input: 'l', 'blablabla'</strong>  -- <span class="result">result: ${deleteLetters('l', 'blablabla')}</span></p>`);
+document.writeln(`<p> <span class="name">Function 10</span>  - checks if the given word is palindrome: <strong>input: 'Аргентина манит негра</strong>   -- <span class="result">result: ${isPalindrome('Аргентина манит негра')}</span></p>`);
+document.writeln(`<p> <span class="name">Function 11</span>  - deletes all duplicate letters from the string: <strong>input: 'Бисквит был очень нежный'</strong>  -- <span class="result">result: ${deleteDuplicateLetter('Бисквит был очень нежный')}</span></p>`);
