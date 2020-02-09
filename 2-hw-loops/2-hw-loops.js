@@ -24,6 +24,7 @@ while (numberN > numberM) {
  numberM = parseInt(prompt('Error! The starting number must be lower than the ending number! Please enter the correct ending number'));
 }
 
+
 const skipEvenNumbers = confirm('Do you want to skip even numbers?')
 
 console.log(`Skip even numbers? : ${skipEvenNumbers}`);
@@ -40,9 +41,9 @@ for (let i = numberN; i <= numberM; i++) {
 }
 
 
-if (skipEvenNumbers === false) {
+if (!skipEvenNumbers) {
   console.log(`The sum of numbers between ${numberN} and ${numberM} is ${sum}`);
-} else if (skipEvenNumbers === true) {
+} else {
   console.log(`The sum of odd numbers between ${numberN} and ${numberM} is: ${sum}`);
 }
 
