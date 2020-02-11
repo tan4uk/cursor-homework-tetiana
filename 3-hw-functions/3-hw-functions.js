@@ -1,7 +1,7 @@
 // Function 1
 const getMaxDigit = (number) => {
-    const arr = number.toString().split('');
-    return Math.max(...arr);
+    const str = number.toString();
+    return Math.max(...str);
 }
   
 console.log(getMaxDigit(1236));
@@ -11,14 +11,12 @@ console.log(getMaxDigit(1236));
 const getPowNumber = (num1, num2) => {
   let result = 1;
     for (let i = 1; i <= num2; i++) {
-      if( num2 === 0) {
-        result = 1;
-     } else {
         result *= num1;
-     }
    }
   return result;
 }
+
+console.log( getPowNumber(8,4));
 
 
 // Function 3
@@ -34,8 +32,7 @@ console.log(upperFirstLetter('vLAD'));
 // Function 4 
 const getSumWithoutTax = (salary) => {
     const taxPercent = 19.5;
-    const clientRemainder = salary - salary*taxPercent/100;
-    return clientRemainder;
+    return salary - salary*taxPercent/100;;
 }
  
 console.log(getSumWithoutTax(1000));
@@ -71,10 +68,11 @@ const convertMoney = (string) => {
     const dollar = string.slice(string.length-1, string.length);
     const ukrValue = string.slice(0, string.length-3);
     const usaValue = string.slice(0, string.length-1);
+    const exchangeRate = 25;
       if (hrn === 'uah') {
-        return (ukrValue/25) + '$';
+        return (ukrValue/exchangeRate) + '$';
     } else if (dollar === '$') {
-        return (usaValue*25) + 'грн.';
+        return (usaValue*exchangeRate) + 'грн.';
     } else {
         return "You've entered the wrong value!";
     }
@@ -112,7 +110,6 @@ console.log(deleteLetters('l', 'blablabla'))
 
 // Function 10
 const isPalindrome = (string) => {
-    const result = true;
     let newString = ''; 
     for (let i = 0; i < string.length; i++) {
       if(string[i] !== ' ') {
@@ -125,7 +122,7 @@ const isPalindrome = (string) => {
        return false;
       }
     }
-   return result;
+   return true;
 }
   
 console.log(isPalindrome('Аргентина манит негра'));
