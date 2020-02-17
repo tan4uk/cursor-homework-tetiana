@@ -1,0 +1,19 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+}
+
+.name {
+    font-family: 'Sriracha', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color:orangered;
+}
+
+.result {
+    font-family: 'Sriracha', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: orangered;
+
+}
