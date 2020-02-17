@@ -74,9 +74,11 @@ console.log(filterEvenNumbers(1, 2, 3, 4, 5, 6));
 // Function 5
 
 const countPositiveNumbers = (...numbers) => {
-  const positiveNumbers = numbers.filter(number => number > 0);
+  const positiveNumbers = numbers.filter(number => {
+       return number > 0;
+})
   return positiveNumbers.length;
-};
+}
 
 console.log(countPositiveNumbers(1, -2, 3, -4, -5, 6));
 
@@ -86,12 +88,13 @@ console.log(countPositiveNumbers(1, -2, 3, -4, -5, 6));
 // Function 6
 
 const getDividedByFive = (...numbers) => {
-  return numbers.filter(number => number % 5 === 0);
-};
+  const numbersDividedByFive = numbers.filter(number => {
+     return number % 5 === 0;
+})
+ return numbersDividedByFive;
+}
 
-console.log(
-  getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)
-);
+console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
 
 
