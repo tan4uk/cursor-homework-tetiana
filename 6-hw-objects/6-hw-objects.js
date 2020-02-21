@@ -54,7 +54,7 @@ const getAverageMark = student => {
   let average = subjectList.reduce((accumulator, element) => {
     return accumulator + element;
   }, 0);
-  return (average / subjectList.length).toFixed(2);
+  return Number((average / subjectList.length).toFixed(2));
 };
 
 console.log(getAverageMark(students[0]));
