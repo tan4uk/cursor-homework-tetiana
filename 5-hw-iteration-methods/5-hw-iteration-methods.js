@@ -19,7 +19,7 @@ const getModa = (...numbers) => {
   let counter = 0;
   let max = 0;
   let result;
-  let sortNumbers = numbers.sort();
+  const sortNumbers = numbers.sort();
   for (i = 0; i < sortNumbers.length; i++) {
     if (sortNumbers[i] === sortNumbers[i + 1]) {
       counter++;
