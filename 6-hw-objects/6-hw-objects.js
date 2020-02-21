@@ -119,4 +119,4 @@ calculateWordLetters = word => {
   return lettersObj;
 };
 
-console.log(calculateWordLetters("test"));
+console.log(calculateWordLetters('test'));
