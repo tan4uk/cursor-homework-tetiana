@@ -36,10 +36,7 @@ const getSubjects = student => {
   let newSubjectList = subjectList.map(subject => {
     return subject.charAt(0).toUpperCase() + subject.slice(1);
   });
-  let resultArray = newSubjectList
-    .join()
-    .replace("_", " ")
-    .split(",");
+  let resultArray = newSubjectList.join().replace("_", " ").split(",");
   return resultArray;
 };
 
@@ -94,9 +91,7 @@ console.log(getStudentsNames(students));
 
 const getBestStudent = array => {
   const bestStudent = array.reduce((previousValue, currentValue) => {
-    return getAverageMark(previousValue) > getAverageMark(currentValue)
-      ? previousValue
-      : currentValue;
+    return getAverageMark(previousValue) > getAverageMark(currentValue) ? previousValue : currentValue;
   });
   return bestStudent.name;
 };
