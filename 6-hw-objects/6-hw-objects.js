@@ -33,10 +33,10 @@ const students = [
 
 const getSubjects = student => {
   let subjectList = Object.keys(student.subjects);
-  let newSubjectList = subjectList.map(subject => {
+  const newSubjectList = subjectList.map(subject => {
     return subject.charAt(0).toUpperCase() + subject.slice(1);
   });
-  let resultArray = newSubjectList.join().replace("_", " ").split(",");
+  const resultArray = newSubjectList.join().replace("_", " ").split(",");
   return resultArray;
 };
 
@@ -47,8 +47,8 @@ console.log(getSubjects(students[0]));
 // Function 2
 
 const getAverageMark = student => {
-  let subjectList = Object.values(student.subjects).flat();
-  let average = subjectList.reduce((accumulator, element) => {
+  const subjectList = Object.values(student.subjects).flat();
+  const average = subjectList.reduce((accumulator, element) => {
     return accumulator + element;
   }, 0);
   return Number((average / subjectList.length).toFixed(2));
@@ -77,7 +77,7 @@ console.log(getStudentInfo(students[0]));
 // Function 4
 
 const getStudentsNames = arr => {
-  let studentsNames = arr.map(student => {
+  const studentsNames = arr.map(student => {
     return student.name;
   });
   return studentsNames.sort();
@@ -104,7 +104,7 @@ console.log(getBestStudent(students));
 
 calculateWordLetters = word => {
   const lettersObj = {};
-  for (i = 0; i < word.length; i++) {
+  for (let i = 0; i < word.length; i++) {
     if (lettersObj[word[i]]) {
       lettersObj[word[i]] += 1;
     } else {
