@@ -10,6 +10,8 @@ const getMyTaxes = function(salary) {
 };
 
 console.log(getMyTaxes.call(ukraine, 1500));
+console.log(getMyTaxes.call(latvia, 1500));
+console.log(getMyTaxes.call(litva, 1500));
 
 
 
@@ -19,7 +21,9 @@ const getMiddleTaxes = function() {
   return this.tax * this.middleSalary;
 };
 
+console.log(getMiddleTaxes.call(ukraine));
 console.log(getMiddleTaxes.call(latvia));
+console.log(getMiddleTaxes.call(litva));
 
 
 
@@ -29,6 +33,8 @@ const getTotalTaxes = function() {
   return this.tax * this.middleSalary * this.vacancies;
 };
 
+console.log(getTotalTaxes.call(ukraine));
+console.log(getTotalTaxes.call(latvia));
 console.log(getTotalTaxes.call(litva));
 
 
