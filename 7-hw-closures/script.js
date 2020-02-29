@@ -49,7 +49,7 @@ const getMySalary = function(country) {
   const salary = getRandomNumber(1500, 2000);
   const taxes = getMyTaxes.call(country, salary);
   const profit = salary - taxes;
-  const InfoObj = {
+  const infoObj = {
     salary,
     taxes,
     profit
