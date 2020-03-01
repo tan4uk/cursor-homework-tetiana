@@ -22,12 +22,20 @@ class Student {
   }
 
   set studentMarks(mark) {
+    if (this.isDismissed) {
+      return null;
+    } else {
     this.marks.push(mark);
+    }
   }
 
   getAverageMark() {
+    if (this.isDismissed) {
+      return null;
+    } else {
     const markSum = this.marks.reduce((accumulator, mark) => accumulator + mark, 0);
     return markSum / this.marks.length;
+    }
   }
 
   dismiss() {
@@ -52,10 +60,12 @@ console.log(ostapStudent.getAverageMark());
 ostapStudent.dismiss();
 console.log(ostapStudent.isDismissed);
 console.log(ostapStudent.studentMarks);
+ostapStudent.studentMarks = 5;
+console.log(ostapStudent.studentMarks);
+console.log(ostapStudent.getAverageMark());
 
 ostapStudent.recover();
 console.log(ostapStudent.isDismissed);
-
 
 
 // Advanced task
