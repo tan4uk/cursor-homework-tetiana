@@ -55,7 +55,7 @@ const getMySalary = function(country) {
     profit
   };
   return setInterval(() => {
-    console.log(InfoObj);
+    console.log(infoObj);
   }, 10000);
 };
 
