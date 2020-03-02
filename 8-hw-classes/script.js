@@ -77,7 +77,8 @@ class BudgetStudent extends Student {
   }
 
   getScholarship() {
-    if (this.getAverageMark() >= 4 && !this.isDismissed) {
+    const minMark = 4;
+    if (this.getAverageMark() >= minMark && !this.isDismissed) {
       console.log("You've received 1400 grn scholarship");
     } else {
       console.log("You haven't received a scholarship");
