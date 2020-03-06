@@ -10,7 +10,7 @@ const generateBlocks = () => {
   const mainBlock = document.getElementById('main-block');
   const blocksAmount = 25;
   mainBlock.innerHTML = '';
-  for (i = 0; i < blocksAmount; i++) {
+  for (let i = 0; i < blocksAmount; i++) {
     let coloredBlock = document.createElement('div');
     coloredBlock.style.width = '50px';
     coloredBlock.style.height = '50px';
