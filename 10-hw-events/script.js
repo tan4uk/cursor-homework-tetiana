@@ -26,7 +26,7 @@ function playSound(key) {
       if (sound && sound != e.target) {
         sound.pause();
       }
-      audio = e.target;
+      sound = e.target;
     },
     true
   );
