@@ -1,0 +1,61 @@
+body {
+    background-color: #E8D0F7;
+    color: #091A7A;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.keys {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    height: 450px;
+    width: 400px;
+    padding: 40px;
+    border: 1px solid silver;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    position: relative;
+}
+
+#forest {
+    background-image: url(./images/forest.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#rain {
+    background-image: url(./images/rain2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ocean {
+    background-image: url(./images/ocean.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#thunder {
+    background-image: url(./images/thunder2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.theme {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: #E8D0F7;
+}
+
+.pressed {
+    border: 2px solid white;
+}
