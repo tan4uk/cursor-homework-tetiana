@@ -7,13 +7,13 @@ keys.forEach(key => {
     playSound(key);
     key.classList.add('pressed');
   });
-});
 
-keys.forEach(key => {
   key.addEventListener('mouseout', () => {
     key.classList.remove('pressed');
   });
+
 });
+
 
 document.addEventListener('keydown', e => {
   if (e.repeat) return;
