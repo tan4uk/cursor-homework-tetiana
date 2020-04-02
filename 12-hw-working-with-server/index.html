@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Working with server</title>
+</head>
+<body>
+    <div class="btn-wrapper">
+        <div class="main-btn">
+            <div class="btn">
+                <label for="characters">
+                    <input type="number" class="button" id="season" value="1" min="1" max="7">
+                    <button id="characters" class="button">Choose episode to show characters </button>
+                </label>
+            </div>
+            <div class="btn"></div>
+            <button id="planets" class="button">All planets</button>
+        </div>
+    </div>
+    <div class="new-btn">
+        <button id="previous" class ="hidden button">Previous</button>
+        <button id="next" class ="hidden button">Next</button>
+    </div>
+    <div id="root"></div>
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>
