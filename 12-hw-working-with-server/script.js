@@ -52,8 +52,6 @@ const personContainer = document.createElement('div');
 personContainer.setAttribute('class', 'person-container');
 info.appendChild(personContainer);
 
-
-
 // Get film characters info
 
 async function getCharacters(season) {
@@ -73,34 +71,12 @@ async function getCharacters(season) {
   }
 }
 
-
 async function getPerson(url) {
   try {
     let response = await fetch(url);
     if (response.ok) {
       let jsonResponse = await response.json();
-      const personCard = document.createElement('div');
-      personCard.setAttribute('class', 'person');
-
-      const pic = document.createElement('img');
-      pic.setAttribute('class', 'image');
-      pic.src = `${getImage(jsonResponse.url)}`;
-
-      const h1 = document.createElement('h1');
-      h1.textContent = jsonResponse.name;
-
-      const h2 = document.createElement('h2');
-      h2.textContent = jsonResponse.birth_year;
-
-      const h3 = document.createElement('h3');
-      h3.textContent = jsonResponse.gender;
-
-      personContainer.appendChild(personCard);
-
-      personCard.appendChild(pic);
-      personCard.appendChild(h1);
-      personCard.appendChild(h2);
-      personCard.appendChild(h3);
+      createCharacterCard(jsonResponse);
     }
   } catch (err) {
     err = document.createElement('error');
@@ -109,6 +85,30 @@ async function getPerson(url) {
   }
 }
 
+function createCharacterCard(response) {
+  const personCard = document.createElement('div');
+  personCard.setAttribute('class', 'person');
+
+  const pic = document.createElement('img');
+  pic.setAttribute('class', 'image');
+  pic.src = `${getImage(response.url)}`;
+
+  const h1 = document.createElement('h1');
+  h1.textContent = response.name;
+
+  const h2 = document.createElement('h2');
+  h2.textContent = response.birth_year;
+
+  const h3 = document.createElement('h3');
+  h3.textContent = response.gender;
+
+  personContainer.appendChild(personCard);
+
+  personCard.appendChild(pic);
+  personCard.appendChild(h1);
+  personCard.appendChild(h2);
+  personCard.appendChild(h3);
+}
 
 function getImage(key) {
   if (images[key] === undefined) {
@@ -123,7 +123,6 @@ function getInputValue() {
   return inputValue;
 }
 
-
 // Get planets info
 
 async function getPlanets(page) {
@@ -131,24 +130,28 @@ async function getPlanets(page) {
     let response = await fetch(url + queryParamsPlanets + page);
     if (response.ok) {
       let jsonResponse = await response.json();
-      const planets = jsonResponse.results;
-      planets.forEach(planet => {
-        const card = document.createElement('div');
-        card.setAttribute('class', 'card');
-
-        const h1 = document.createElement('h1');
-        h1.textContent = planet.name;
-        
-        planetContainer.appendChild(card);
-
-        card.appendChild(h1);
-      });
+      createPlanetCard(jsonResponse);
     }
   } catch (err) {
     err = document.createElement('error');
     err.textContent = `Request failed!`;
     info.appendChild(err);
   }
+}
+
+function createPlanetCard(response) {
+  const planets = response.results;
+  planets.forEach(planet => {
+    const card = document.createElement('div');
+    card.setAttribute('class', 'card');
+
+    const h1 = document.createElement('h1');
+    h1.textContent = planet.name;
+
+    planetContainer.appendChild(card);
+
+    card.appendChild(h1);
+  });
 }
 
 
