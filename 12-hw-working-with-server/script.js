@@ -168,7 +168,7 @@ characters.addEventListener('click', () => {
 });
 
 planets.addEventListener('click', () => {
-  getPlanets(currentPage);
+  getPlanets('1');
   personContainer.innerHTML = '';
   planetContainer.innerHTML = '';
   next.classList.add('shown');
