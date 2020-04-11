@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    background-color: rgb(156, 92, 173);
+    color: white;
+    padding: 10px 15px;
+}
+
+#result {
+    height: 50px;
+    font-size: 23px;
+    padding: 20px;
+}
+
+
+

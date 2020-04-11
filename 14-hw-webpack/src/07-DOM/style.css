@@ -1,0 +1,6 @@
+#main-block {
+    display: flex;
+    max-width: 250px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}

@@ -2,7 +2,7 @@
 
 const getRandomArray = (length, min, max) => {
   const randomArray = [];
-  for (i = 0; i < length; i++) {
+  for (let i = 0; i < length; i++) {
     const randomNumber = Math.floor(Math.random() * (max + 1 - min) + min);
     randomArray.push(randomNumber);
   }
@@ -20,7 +20,7 @@ const getModa = (...numbers) => {
   let max = 0;
   let result;
   const sortNumbers = numbers.sort();
-  for (i = 0; i < sortNumbers.length; i++) {
+  for (let i = 0; i < sortNumbers.length; i++) {
     if (sortNumbers[i] === sortNumbers[i + 1]) {
       counter++;
     } else {

@@ -41,7 +41,7 @@ console.log(themesForStudents);
 
 const sortMarks = (arr1, arr2) => {
   const sortedMarks = [];
-  for (i = 0; i < arr1.length; i++) {
+  for (let i = 0; i < arr1.length; i++) {
     sortedMarks.push([arr1[i], arr2[i]]);
   }
   return sortedMarks;
@@ -58,7 +58,7 @@ let pairedThemes = sortPairsWithThemes(paired, themes);
 
 const getRandomMark = array => {
   const projectMarks = [];
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     let randomMark = Math.floor(Math.random() * 5 + 1);
     projectMarks.push([...array[i], randomMark]);
   }
