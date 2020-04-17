@@ -6,8 +6,6 @@ import { latvia, getMyTaxes } from './05-closures/script';
 import { ostapStudent } from './06-classes/script';
 import { generateBlocksInterval } from './07-DOM/script';
 
-
-
 const result = document.getElementById('result');
 const block = document.getElementById('main-block');
 
